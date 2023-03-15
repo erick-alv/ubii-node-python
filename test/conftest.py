@@ -57,7 +57,7 @@ def service_url_env():
     import os
     from ubii.framework.constants import UBII_URL_ENV
     old = os.environ.get(UBII_URL_ENV)
-    os.environ[UBII_URL_ENV] = 'http://localhost:8102/services'
+    os.environ[UBII_URL_ENV] = 'http://localhost:8102/services/json'
     yield
     if old:
         os.environ[UBII_URL_ENV] = old

@@ -34,7 +34,7 @@ class UbiiConfig:
     """
     SERVER: ub.Server = _default_server
     CONSTANTS: ub.Constants = _default_constants
-    DEFAULT_SERVICE_URL: str = os.getenv(UBII_URL_ENV, 'http://localhost:8102/services')
+    DEFAULT_SERVICE_URL: str = os.getenv(UBII_URL_ENV, 'http://localhost:8102/services/json')
 
 
 # shared config
