@@ -12,7 +12,7 @@ from contextlib import suppress
 from functools import wraps, partial
 
 import ubii.proto as ub
-from ubii.util import get_import_name
+from ubii.proto.util import get_import_name
 
 from . import util
 from .logging import debug
