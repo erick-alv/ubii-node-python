@@ -193,15 +193,14 @@ def aiohttp_session():
         timeout = aiohttp.ClientTimeout(total=300)
         trace_configs = []
 
-    #TODO fix this
-    # from ubii.proto import serialize as proto_serialize
-    # return aiohttp.ClientSession(raise_for_status=True,
-    #                              json_serialize=proto_serialize,
-    #                              trace_configs=trace_configs,
-    #                              timeout=timeout)
-
-    # Since it does not exist trying without it
+    #TODO fix
+    from ubii.proto import serialize as proto_serialize
     return aiohttp.ClientSession(raise_for_status=True,
-                                 #json_serialize=proto_serialize,
+                                 json_serialize=proto_serialize,
                                  trace_configs=trace_configs,
                                  timeout=timeout)
+
+    # Since it has a default, trying without it. :( It did not work
+    # return aiohttp.ClientSession(raise_for_status=True,
+    #                              trace_configs=trace_configs,
+    #                              timeout=timeout)
