@@ -36,7 +36,8 @@ def main():
     from ubii.framework.logging import parse_args, logging_setup
     from ubii.framework.client import InitProcessingModules
     from codestare.async_utils.nursery import TaskNursery
-    from . import load_pm_entry_points
+    #from . import load_pm_entry_points # for some reason when trying to run this on pycharm it dies not work
+    from ubii.cli import load_pm_entry_points
     parser = argparse.ArgumentParser()
     parser.add_argument('--processing-modules', action='append', default=[])
     parser.add_argument('--no-discover', action='store_true', default=False)

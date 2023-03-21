@@ -6,7 +6,8 @@ from contextlib import suppress
 import pytest
 
 from ubii.framework.protocol import AbstractProtocol, RunProtocol
-from ubii.framework.default_protocol import DefaultProtocol, States as UbiiStates
+#from ubii.framework.default_protocol import DefaultProtocol, States as UbiiStates
+from ubii.node.node_protocol import DefaultProtocol, States as UbiiStates
 
 pytestmark = pytest.mark.asyncio
 log = logging.getLogger(__name__)

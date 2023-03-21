@@ -8,7 +8,8 @@ import yaml
 
 import ubii.proto as ub
 from ubii.framework.client import Devices, UbiiClient, Services
-from ubii.framework.default_protocol import DefaultProtocol
+#from ubii.framework.default_protocol import DefaultProtocol
+from ubii.node.node_protocol import DefaultProtocol
 from ubii.framework.logging import logging_setup
 
 __verbosity__: int | None = None
@@ -138,7 +139,9 @@ async def start_session(client_spec):
         # await client_spec.services.session_runtime_stop(session=session)
 
 
-P = t.TypeVar('P', bound=ub.ProtoMessage)
+#P = t.TypeVar('P', bound=ub.ProtoMessage)
+from proto import Message as ProtoMessage
+P = t.TypeVar('P', bound=ProtoMessage)
 
 
 def _change_specs(proto: P, *specs: P):
